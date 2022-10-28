@@ -1,5 +1,28 @@
 #include <stdio.h>
 
+void intercambio(int *x, int *y){
+	int temp = *x;
+	*x = *y;
+	*y = temp;
+}
+
+int particion(int a[], int izq, int der){
+	int pivote = = a[izq]
+			while(1){
+					while(a[izq] < pivote){
+						izq++
+					}
+					while(a[der] > pivote){
+						der --;
+					}
+					if(izq >= der){
+						return der;
+					}else{
+						return izq;
+					}
+			}break
+}
+
 void insertionSort(int a[], int n){
 	for(int i=1;i<n;i++){
 		int key = a[i];
@@ -13,13 +36,9 @@ void insertionSort(int a[], int n){
 }
 void bubble_sort(int a[], int n){
 	for(int i=1; i<n; i++)
-		for(int j=0; j<n-1; j++){
-			if(a[j]>a[j+1]){
-				int temp = a[j];
-				a[j] = a[j+1];
-				a[j+1] = temp;
-			}
-		}
+		for(int j=0; j<n-1; j++)
+			if(a[j]>a[j+1])
+				intercambio(&a[j], &a[j+1]);
 }
 
 void pantalla(int a[], int n){
@@ -47,4 +66,4 @@ void main(){
 	printf("\nValores ordenados: ");
 	pantalla(a,t);
 	printf("\n\n");
-
+}
