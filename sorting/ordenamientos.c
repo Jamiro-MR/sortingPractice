@@ -90,6 +90,7 @@ void leer_archivo(){
 		i++;
 	}while (c != EOF);
 }
+
 void pantalla(int A[], int n){
 	for(int i = 0; i < n-1; i++)
 		printf("%d, ", A[i]);
@@ -99,7 +100,9 @@ void pantalla(int A[], int n){
 
 int main(){
 
-	int n = 5;
+	int n = 10;
+	int num= 0;
+	int pos= 0;
 
 	leer_archivo();
 
@@ -115,4 +118,11 @@ int main(){
 	pantalla(A, n);
 
 	printf("\n");
+
+	printf("¿Que numero desea buscar?\n");
+	scanf("%d", &num);
+
+	//busqueda
+	printf("Encontre el numero en la posición %d\n", pos);
+
 }
