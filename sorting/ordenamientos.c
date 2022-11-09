@@ -3,6 +3,7 @@
 
 int A[5];
 
+//Funcion de intercambio
 void swap(int *x, int *y){
 	int key = *x;
 	*x = *y;
@@ -28,6 +29,7 @@ int particion(int A[], int izq, int der){
 	}
 }
 
+//Función de sorteo rapido/quicksort
 void quicksort(int A[], int izq, int der){
 	if(izq < der){
 		int indice = particion(A, izq, der);
@@ -36,6 +38,7 @@ void quicksort(int A[], int izq, int der){
 	}
 }
 
+//Función de sorteo por insersión/insertion sort
 void insertion_sort(int A[], int n){
 	for(int j = 1; j < n; j++){
 		int key = A[j];
@@ -49,6 +52,7 @@ void insertion_sort(int A[], int n){
 	}
 }
 
+//Función de examen ejemplo
 void examen(int A[], int n){
 	for (int i = 0; i < n; i++){
 		for(int j = i+1; j < n; j++){
@@ -59,6 +63,7 @@ void examen(int A[], int n){
 	}
 }
 
+//Función de sorteo por burbuja/bubble sort
 void bubble(int A[], int n){
 	for(int i = 1; i < n; i++){
 		for(int j = 0; j < n-1; j++){
@@ -68,6 +73,8 @@ void bubble(int A[], int n){
 		}
 	}
 }
+
+//Leer desde un archivo txt
 void leer_archivo(){
 	FILE* archivo;
 	char texto[20];
@@ -91,6 +98,7 @@ void leer_archivo(){
 	}while (c != EOF);
 }
 
+//Imprimir los numeros en pantalla
 void pantalla(int A[], int n){
 	for(int i = 0; i < n-1; i++)
 		printf("%d, ", A[i]);
